@@ -14,6 +14,17 @@ public class SeatTest {
 
         // Assert
         Assertions.assertEquals(expected, acutaul);
-
     }
+
+    @Test
+    public void initFifteenSeatTest() {
+        SeatsPlan seatsPlan = new SeatsPlan();
+
+        for(int i = 0; i < 15; i ++) {
+            Assertions.assertEquals(false, seatsPlan.getSeats().get(i).isAllocated() );
+        }
+    }
+
+
+
 }
